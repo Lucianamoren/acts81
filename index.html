@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejercicio1</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body onmousemove="position(event)">
+
+	<div class="body" onclick="mover();">
+		<div class="divvg"></div>
+			<div class="cuadrito" id="ct">
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+			ld=document.getElementById('ct');
+
+			var x = 0;
+			var y = 0;
+
+function position(event) {
+
+	 x=event.clientX;
+	 y=event.clientY;
+
+console.log("x: "+ x + "  " +"y: "+ y);
+
+}
+
+function mover() {
+
+	var xl = x - 50;
+	var yl = y - 50;
+
+	if (xl>450 && (xl + 100)<950 && yl>100 && (yl + 100)<600) {
+
+ld.style.top = yl + "px";
+ld.style.left = xl + "px";
+
+}
+}
+
+		</script>
+
+</body>
+</html>
